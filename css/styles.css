@@ -1,117 +1,167 @@
 /* Manan Makwana 8909747 */
+html {
+    font: normal normal normal 20px/1.5 Arial;
+}
 
-body
-{
-    font : normal normal normal 12px/1.5 Arial;
-    height : 100vh;
-    width : 100vw;
-
-    background-color: hsla(200, 45%, 81%,0.7 );
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(200, 45%, 81%, 0.7);
 
 }
-header{
+
+header {
     background-color: hsla(200, 89%, 35%, 0.7);
+    flex: 1 10%;
 }
-h1
-{
-    font-size: 2rem;
+
+h1 {
+    font-size: 2.5rem;
     color: rgb(233, 10, 10);
 
 }
-h2
-{
+
+h2 {
     font-size: 2rem;
     color: rgb(233, 10, 10);
 }
-aside ul
-      {
-        list-style-type: square;
-      }
-aside li, a
-      {
-        line-height: 1.5rem;
-        color: rgba(120, 200, 90 , 0.5);
-      }
-main{
-    background-color: hsla(64, 84%, 46%, 0.7);
-    float: left;
-    width: 65vw;
-    height: 70vh;
+
+aside ul {
+    list-style-type: square;
 }
-nav ul li
-{
+
+aside li,
+a {
+    line-height: 1.5rem;
+    color: rgba(120, 200, 90, 0.5);
+}
+section{
+    display: flex;
+    flex-direction: row;
+    flex: 4 8%;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+main {
+    flex: 2 1 70%;
+    height: 70vh;
+    background-color: hsla(64, 84%, 46%, 0.7);
+}
+nav{
+    flex: 1 5%;
+}
+nav ul li {
     display: inline;
     list-style-type: none;
 }
-nav ul li a
-{
+
+nav ul li a {
     border: 2px solid black;
     color: aqua;
     background-color: rgb(226, 153, 43);
     text-decoration: none;
-    padding: 4px;
+    padding: 1em;
 }
-nav ul li a:hover
-{
+
+nav ul li a:hover {
     border: 2px solid rgb(226, 153, 43);
     color: aqua;
     background-color: black;
 
 }
-aside{
+
+aside {
     background-color: hsla(0, 0%, 0%, 0.7);
-    float: right;
-    width: 25vw;
+    flex: 1 2 30%;
     height: 70vh;
 }
-footer{
-    clear: both;
+
+footer {
+    flex: 1 5%;
     background-color: hsla(17, 100%, 50%, 0.7);
 }
 
-.structural{
-    margin: 10px;
-    padding: 10px;
+.structural {
+    margin: 1rem;
+    padding: 1rem;
     border: 2px solid black;
 }
 
-#para1{
+#para1 {
     color: rgb(201, 77, 106);
 }
 
-#para2{
+#para2 {
     color: rgb(17, 29, 194);
 }
-form
-{
+
+form {
     border: 5px dashed red;
 }
-input [type=text], [type=email], input[type=submit], select, option
-{
+
+input [type=text],
+[type=email],
+input[type=submit],
+select,
+option {
     display: block;
     width: 50%;
     height: 2rem;
 }
-input [type=radio], [type=checkbos]
-{
+
+input [type=radio],
+[type=checkbos] {
     height: 2em;
     width: 2em;
 }
-select, option, label, legend
-{
-    font-variant:small-caps ;
+
+select,
+option,
+label,
+legend {
+    font-variant: small-caps;
     font-weight: bold;
-    font-size:1.5rem ;
+    font-size: 1.5rem;
 }
-textarea
-{
+
+textarea {
     width: 50%;
     display: block;
 }
-fieldset
-{
+
+fieldset {
     border: none;
 }
-footer p{
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+figure{
+    border: 2px dotted black;
+}
+img{
+    width: 80%;
+    height: 80%;
+}
+footer p {
+    clear: both;
     font-size: .75em;
+}
+@media (max-width: 1200px){
+    html{
+        font-size: 15px;
+    }
+}
+@media(max-width : 600px){
+    html{
+        font-size: 10px;
+    }
+    #gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
